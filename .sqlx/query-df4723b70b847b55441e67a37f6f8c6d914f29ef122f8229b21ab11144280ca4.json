@@ -1,0 +1,100 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n        SELECT\n            id, category_id, generic_name, syn_name, detail, drug_type,\n            dosage_forms, ed_level, recommendations, conditions, warnings,\n            notes, footnote, source_code\n        FROM drugs\n        WHERE generic_name ILIKE $1 OR syn_name ILIKE $1\n        ORDER BY generic_name\n        LIMIT 100\n        ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 1,
+        "name": "category_id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 2,
+        "name": "generic_name",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 3,
+        "name": "syn_name",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 4,
+        "name": "detail",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 5,
+        "name": "drug_type",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 6,
+        "name": "dosage_forms",
+        "type_info": "TextArray"
+      },
+      {
+        "ordinal": 7,
+        "name": "ed_level",
+        "type_info": "Varchar"
+      },
+      {
+        "ordinal": 8,
+        "name": "recommendations",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 9,
+        "name": "conditions",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 10,
+        "name": "warnings",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 11,
+        "name": "notes",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 12,
+        "name": "footnote",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 13,
+        "name": "source_code",
+        "type_info": "Varchar"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Text"
+      ]
+    },
+    "nullable": [
+      false,
+      true,
+      false,
+      true,
+      true,
+      true,
+      false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ]
+  },
+  "hash": "df4723b70b847b55441e67a37f6f8c6d914f29ef122f8229b21ab11144280ca4"
+}

@@ -1,0 +1,9 @@
+# Rust artifacts
+/target
+Cargo.lock
+
+# Environment file
+.env
+
+# Log files
+*.log

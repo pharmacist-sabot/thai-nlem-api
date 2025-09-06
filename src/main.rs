@@ -17,7 +17,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         .init();
 
     // Load .env file
-    dotenvy::dotenv().expect(".env file not found");
+    dotenvy::dotenv().ok();
 
     // Create database connection pool
     let pool = db::create_pool().await?;
